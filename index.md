@@ -52,7 +52,7 @@ python main.py run "nmap 10.0.4.1 -sC -sV" -g 10.0.4.1
 # Note we are in the "10.0.4.1" group
 ```
 
-It would be hard to keep track of each output, we would have to write to different files and cat each every time we want to get the ports of the specific traffic, using cachier is so easy.
+It would be hard to keep track of each output, we would have to write to different files and cat each every time we want to get the ports of the specific target, using cachier is so easy.
 2. Retriving the port scan
 
 ```bash
