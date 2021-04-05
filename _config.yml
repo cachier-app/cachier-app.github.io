@@ -3,3 +3,4 @@ title: Cachier
 plugins:
   - jekyll-seo-tag
 google-analytics: UA-155379568-9
+google_analytics: UA-155379568-9
