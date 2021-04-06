@@ -6,6 +6,8 @@ layout: default
 
 Cache commands with ease using **cachier**
 
+[Join our Discord Server](https://discord.gg/68pqHX8UHZ)
+
 [![asciicast](https://asciinema.org/a/NXzZP7uiif3iSKwWfgemaq4eT.svg)](https://asciinema.org/a/NXzZP7uiif3iSKwWfgemaq4eT)
 
 PS: Cachier is much more advanced!
