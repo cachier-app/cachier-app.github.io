@@ -1,9 +1,5 @@
-theme: jekyll-theme-cayman
 title: Cachier
-plugins:
-  - jekyll-seo-tag
-  - jekyll-analytics
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-155379568-9          # Required - replace with your tracking id
-    anonymizeIp: true      # Optional - Default: false - set to true for anonymized tracking
+description: Cache your commands with ease.
+show_downloads: true
+google_analytics: UA-155379568-9
+theme: jekyll-theme-cayman

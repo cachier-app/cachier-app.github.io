@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Cachier
 
 Cache commands with ease using **cachier**
@@ -40,7 +44,7 @@ For example you might have different groups, for different targets!
 
 ## Pentesting Use Case: Examples
 
-1. Running an nmap scan
+### Performing the nmap scan
 
 ```bash
 # Runnig an nmap scan against 10.0.198.246
@@ -53,7 +57,8 @@ python main.py run "nmap 10.0.4.1 -sC -sV" -g 10.0.4.1
 ```
 
 It would be hard to keep track of each output, we would have to write to different files and cat each every time we want to get the ports of the specific target, using cachier is so easy.
-2. Retriving the port scan
+
+### Retriving the port scan
 
 ```bash
 # Retriving the nmap command in the 10.0.198.246 group

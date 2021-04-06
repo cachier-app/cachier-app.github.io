@@ -1,0 +1,73 @@
+I"â<h1 id="cachier">Cachier</h1>
+
+<p>Cache commands with ease using <strong>cachier</strong></p>
+
+<h1 id="installing">Installing</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/cachier-app/cachier
+cd cachier
+pip install rich
+</code></pre></div></div>
+
+<h1 id="basic-usage">Basic Usage</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: cachier [options] [command]
+</code></pre></div></div>
+
+<h2 id="examples">Examples</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py run "ls" 
+</code></pre></div></div>
+<p>This will run ls and save it in the <code class="language-plaintext highlighter-rouge">default</code> cache</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py ls
+</code></pre></div></div>
+<p>This will retrieve every ls command cached, you will be asked which one to retrieve in case there are multiple caches of same command</p>
+
+<h1 id="advanced-usage">Advanced Usage</h1>
+
+<p>Cachier uses groups. Each group is a collection of command caches, you can switch groups using the <code class="language-plaintext highlighter-rouge">-g</code> argument.</p>
+
+<h1 id="pentesting-use-case">Pentesting Use Case</h1>
+
+<p>If you are pentesting a network, you might want to keep track of your recon commandsâ€™ output, for example, nmap, dirbuster, etc. Cachier makes it easy to store these information for later usage, it will also syntax highlight the output to make it prettier to look at!</p>
+
+<p>For example you might have different groups, for different targets!</p>
+
+<h2 id="pentesting-use-case-examples">Pentesting Use Case: Examples</h2>
+
+<h3 id="performing-the-nmap-scan">Performing the nmap scan</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Runnig an nmap scan against 10.0.198.246</span>
+python main.py run <span class="s2">"nmap 10.0.198.246 -sC -sV"</span> <span class="nt">-g</span> 10.0.198.246
+<span class="c"># Note we are in the "10.0.198.246" group</span>
+
+<span class="c"># Runnig an nmap scan against 10.0.4.1</span>
+python main.py run <span class="s2">"nmap 10.0.4.1 -sC -sV"</span> <span class="nt">-g</span> 10.0.4.1
+<span class="c"># Note we are in the "10.0.4.1" group</span>
+</code></pre></div></div>
+
+<p>It would be hard to keep track of each output, we would have to write to different files and cat each every time we want to get the ports of the specific target, using cachier is so easy.</p>
+
+<h3 id="retriving-the-port-scan">Retriving the port scan</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retriving the nmap command in the 10.0.198.246 group</span>
+python main.py nmap <span class="nt">-g</span> 10.0.198.246
+
+<span class="c"># Retriving the nmap command in the 10.0.4.1 group</span>
+python main.py nmap <span class="nt">-g</span> 10.0.4.1
+</code></pre></div></div>
+
+<h1 id="other-arguments--examples">Other arguments &amp; examples</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--debug: Enable debug mode.
+--clear-cache: Clear all saved caches.
+--no-highlight: Turn of syntax highlighting while printing cached data.
+Example:
+        cachier run ls  #For caching a command.
+        cachier ls      #For showing cache of a command.
+        cachier run ls --debug  #For caching a command with debug mode enabled.
+        cachier --clear-cache   #For clearing all cache.
+        cachier ls --no-highlight       #For showing cache of a command.
+</code></pre></div></div>
+:ET
