@@ -6,7 +6,9 @@ layout: default
 
 Cache commands with ease using **cachier**
 
-[![asciicast](https://asciinema.org/a/pcLiGLITEkSA0MOGRY2i5VFI3.svg)](https://asciinema.org/a/pcLiGLITEkSA0MOGRY2i5VFI3)
+[![asciicast](https://asciinema.org/a/NXzZP7uiif3iSKwWfgemaq4eT.svg)](https://asciinema.org/a/NXzZP7uiif3iSKwWfgemaq4eT)
+
+PS: Cachier is much more advanced!
 
 # Installing
 
