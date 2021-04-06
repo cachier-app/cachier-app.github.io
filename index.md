@@ -11,7 +11,7 @@ Cache commands with ease using **cachier**
 ```
 git clone https://github.com/cachier-app/cachier
 cd cachier
-pip install rich
+sudo ./setup.py
 ```
 
 # Basic Usage
@@ -23,12 +23,12 @@ Usage: cachier [options] [command]
 ## Examples
 
 ```
-python main.py run "ls" 
+cachier run "ls" 
 ```
 This will run ls and save it in the `default` cache
 
 ```
-python main.py ls
+cachier ls
 ```
 This will retrieve every ls command cached, you will be asked which one to retrieve in case there are multiple caches of same command
 
@@ -48,11 +48,11 @@ For example you might have different groups, for different targets!
 
 ```bash
 # Runnig an nmap scan against 10.0.198.246
-python main.py run "nmap 10.0.198.246 -sC -sV" -g 10.0.198.246
+cachier run "nmap 10.0.198.246 -sC -sV" -g 10.0.198.246
 # Note we are in the "10.0.198.246" group
 
 # Runnig an nmap scan against 10.0.4.1
-python main.py run "nmap 10.0.4.1 -sC -sV" -g 10.0.4.1
+cachier run "nmap 10.0.4.1 -sC -sV" -g 10.0.4.1
 # Note we are in the "10.0.4.1" group
 ```
 
@@ -62,10 +62,10 @@ It would be hard to keep track of each output, we would have to write to differe
 
 ```bash
 # Retriving the nmap command in the 10.0.198.246 group
-python main.py nmap -g 10.0.198.246
+cachier nmap -g 10.0.198.246
 
 # Retriving the nmap command in the 10.0.4.1 group
-python main.py nmap -g 10.0.4.1
+cachier nmap -g 10.0.4.1
 ```
 
 # Other arguments & examples

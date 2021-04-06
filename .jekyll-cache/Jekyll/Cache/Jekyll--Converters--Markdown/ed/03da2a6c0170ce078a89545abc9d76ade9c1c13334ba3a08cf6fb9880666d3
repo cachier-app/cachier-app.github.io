@@ -1,4 +1,4 @@
-I"â<h1 id="cachier">Cachier</h1>
+I"·<h1 id="cachier">Cachier</h1>
 
 <p>Cache commands with ease using <strong>cachier</strong></p>
 
@@ -6,7 +6,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/cachier-app/cachier
 cd cachier
-pip install rich
+sudo ./setup.py
 </code></pre></div></div>
 
 <h1 id="basic-usage">Basic Usage</h1>
@@ -16,11 +16,11 @@ pip install rich
 
 <h2 id="examples">Examples</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py run "ls" 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cachier run "ls" 
 </code></pre></div></div>
 <p>This will run ls and save it in the <code class="language-plaintext highlighter-rouge">default</code> cache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cachier ls
 </code></pre></div></div>
 <p>This will retrieve every ls command cached, you will be asked which one to retrieve in case there are multiple caches of same command</p>
 
@@ -39,11 +39,11 @@ pip install rich
 <h3 id="performing-the-nmap-scan">Performing the nmap scan</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Runnig an nmap scan against 10.0.198.246</span>
-python main.py run <span class="s2">"nmap 10.0.198.246 -sC -sV"</span> <span class="nt">-g</span> 10.0.198.246
+cachier run <span class="s2">"nmap 10.0.198.246 -sC -sV"</span> <span class="nt">-g</span> 10.0.198.246
 <span class="c"># Note we are in the "10.0.198.246" group</span>
 
 <span class="c"># Runnig an nmap scan against 10.0.4.1</span>
-python main.py run <span class="s2">"nmap 10.0.4.1 -sC -sV"</span> <span class="nt">-g</span> 10.0.4.1
+cachier run <span class="s2">"nmap 10.0.4.1 -sC -sV"</span> <span class="nt">-g</span> 10.0.4.1
 <span class="c"># Note we are in the "10.0.4.1" group</span>
 </code></pre></div></div>
 
@@ -52,10 +52,10 @@ python main.py run <span class="s2">"nmap 10.0.4.1 -sC -sV"</span> <span class="
 <h3 id="retriving-the-port-scan">Retriving the port scan</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retriving the nmap command in the 10.0.198.246 group</span>
-python main.py nmap <span class="nt">-g</span> 10.0.198.246
+cachier nmap <span class="nt">-g</span> 10.0.198.246
 
 <span class="c"># Retriving the nmap command in the 10.0.4.1 group</span>
-python main.py nmap <span class="nt">-g</span> 10.0.4.1
+cachier nmap <span class="nt">-g</span> 10.0.4.1
 </code></pre></div></div>
 
 <h1 id="other-arguments--examples">Other arguments &amp; examples</h1>
