@@ -39,12 +39,22 @@
       {% endif %}
       {% if site.show_downloads %}
         <a href="https://github.com/cachier-app/cachier" class="btn">Go to Github</a>
-        <a href="https://omicronctf.xyz/?utm_source=cachier-app.github.io&utm_medium=headerlink&utm_campaign=omicronctf.xyz" class="btn">Support Server (#cachier-support)</a>
+        <button onclick="omicronctf()" class="btn">Support Server (#cachier-support)</button>
       {% endif %}
     </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
     </main>
+
+    <script>
+      function omicronctf() {
+        window.open('https://omicronctf.xyz/?utm_source=cachier-app.github.io&utm_medium=headerlink&utm_campaign=omicronctf.xyz', '_blank')
+        analytics.track('Link Clicked', {
+          title: 'OmicronCTF: Header'
+        });
+
+      }
+    </script>
   </body>
 </html>
